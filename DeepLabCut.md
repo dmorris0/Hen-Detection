@@ -63,6 +63,7 @@
 	`module load FFmpeg`
 	
 5. Install correct versions of Tensorflow and Keras<br>
+6. 
 	`pip uninstall tensorflow`<br>
         `pip install tensorflow==2.2`<br>
         `pip uninstall keras`<br>
