@@ -3,23 +3,25 @@
 1. Download Python 3.9 from the Windows Store
 
 2. Open a Windows Command Prompt
+
 	1. Type "cmd" in Windows Search
 	2. Click on "Command Prompt"
 
-3. Create a directory for your project
+3. Create a directory for your project<br>
+
 	`mkdir my_project`<br>
 	`cd my_project`
 	
-4. Create virtual environment
+4. Create virtual environment<br>
 
-	`python -m venv venv`
+	`python -m venv venv`<br>
 	`venv\Scripts\activate`
 	
-5. Update pip
+5. Update pip<br>
 
 	`python -m pip install --upgrade pip`	
 	
-6. Install Label Studio - **This may take a long time**
+6. Install Label Studio - **This may take a long time**<br>
 
 	`pip install -U label-studio==1.4`
 	
@@ -48,7 +50,7 @@
 	  and it will hide the labels you don't care about.
 	  
 
-## Bodypoints **TODO: link to google drive**
+## Bodypoints
 
 I recommend reviewing my examples [here](https://drive.google.com/drive/folders/1J7VcchOxZpjfc-51n-_e0IHKwFe8onw5?usp=sharing)
 
