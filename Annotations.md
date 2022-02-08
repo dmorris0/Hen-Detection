@@ -2,28 +2,34 @@
 
 1. Download Python 3.9 from the Windows Store
 
-2. Open PowerShell
+2. Open a Windows Command Prompt
+	1. Type "cmd" in Windows Search
+	2. Click on "Command Prompt"
 
 3. Create a directory for your project
-
 	`mkdir my_project`<br>
 	`cd my_project`
 	
-4. Install Label Studio - **This may take a long time**
+4. Create virtual environment
 
-	`pip install label-studio`
+	`python -m venv venv`
+	`venv\Scripts\activate`
 	
-5. Add Label Studio executable ptath to user environment variables
+5. Update pip
 
-	1. Search for "env" in Windows search
-	2. Click "Edit the system environment variables"
-	3. Under the "Advanced" tab, click on "Environment Variables"
-	4. Under "User variables for <your account name>", click on "New"
-	5. ???
+	`python -m pip install --upgrade pip`	
+	
+6. Install Label Studio - **This may take a long time**
 
-6. Create a Label Studio Account
+	`pip install -U label-studio==1.4`
+	
+7. Start Label Studio (it will open in your web browser)
 
-7. Create and Configure Project **TODO: link to google drive**
+	`label-studio`
+
+7. Create a Label Studio Account
+
+8. Create and Configure Project
 
 	- Download the [XML configuration file](https://drive.google.com/file/d/1zpVENMFebEQhxsQVjsIAEjBeD-Rf3LxO/view?usp=sharing)
 
