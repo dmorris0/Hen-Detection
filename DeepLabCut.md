@@ -26,7 +26,7 @@
 	
 5. Within the IPython Shell<br><br>
 	`import os`<br>
-	`import deeplabcut`
+	`import deeplabcut`<br>
 	`config_path = os.path.join(os.getcwd(), 'config.yaml')`
 
 ## DeepLabCut Installation on HPCC
