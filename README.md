@@ -1,6 +1,6 @@
 # Hen-Detection
 
-This documentation covers to topics:
+This documentation covers two topics:
 
 * [DeepLabCut](DeepLabCut.md) install and usage on HPCC
 * [Annotating images](Annotations.md) using a Windows PC
