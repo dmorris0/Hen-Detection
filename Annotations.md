@@ -49,6 +49,26 @@
 	  the first hen, for example, type "hen1-" in the filter box at the top 
 	  and it will hide the labels you don't care about.
 	  
+	  
+## Starting up Label Studio
+
+1. Open a Windows Command Prompt
+
+	1. Type "cmd" in Windows Search
+	2. Click on "Command Prompt"
+
+2. Change to your project directory<br>
+
+	`cd my_project`
+	
+3. Activate virtual environment<br>
+
+	`venv\Scripts\activate`
+	
+4. Start Label Studio
+
+	`label-studio`
+	  
 
 ## Bodypoints
 
