@@ -62,7 +62,7 @@
 	`module load cuDNN/7.6.4.38-CUDA-10.1.105`<br>
 	`module load FFmpeg`
 	
-5. Install correct versions of Tensorflow and Keras
+5. Install correct versions of Tensorflow and Keras<br>
 	`pip uninstall tensorflow`<br>
         `pip install tensorflow==2.2`<br>
         `pip uninstall keras`<br>
