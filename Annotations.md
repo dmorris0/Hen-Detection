@@ -13,13 +13,19 @@
 
 	`pip install label-studio`
 	
-5. Add Label Studio executable ptath to user environment variables **TODO**
+5. Add Label Studio executable ptath to user environment variables
+
+	1. Search for "env" in Windows search
+	2. Click "Edit the system environment variables"
+	3. Under the "Advanced" tab, click on "Environment Variables"
+	4. Under "User variables for <your account name>", click on "New"
+	5. ???
 
 6. Create a Label Studio Account
 
 7. Create and Configure Project **TODO: link to google drive**
 
-	- Download the file in Google Drive "Hens_Collab/DeepLabCutDocumentation/LabelStudio/label-studio-config.xml
+	- Download the [XML configuration file](https://drive.google.com/file/d/1zpVENMFebEQhxsQVjsIAEjBeD-Rf3LxO/view?usp=sharing)
 
 	- Go to the settings for your new project
 	
@@ -38,7 +44,7 @@
 
 ## Bodypoints **TODO: link to google drive**
 
-I recommend reviewing my examples in Google Drive under "Hens_Collab/DeepLabCutDocumentation/Labeling Examples/"
+I recommend reviewing my examples [here](https://drive.google.com/drive/folders/1J7VcchOxZpjfc-51n-_e0IHKwFe8onw5?usp=sharing)
 
 | Bodypart  | Description |
 |-----------|-------------------------------------------------------------- |
