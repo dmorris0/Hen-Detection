@@ -90,3 +90,9 @@ I recommend reviewing my examples [here](https://drive.google.com/drive/folders/
 | Tail 2	| Halfway between tail 1 & 3, account for tail  orientation |
 | Tail 3	| Last point on tail, if feathers split apart a	t the end, use last visible point in center |
 
+## Example Annotated Image
+
+![Annotated Image](images/img28389.png_out.png)
+
+Plotting function for this: [tools/plotAnno.py](tools/plotAnno.py)
+
