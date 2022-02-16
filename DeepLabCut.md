@@ -15,9 +15,13 @@
 2. Activate virtual environment<br><br>
 	`conda activate DLC`
 	
+	(You may have to load Conda before this command using `module load Conda/3`)
+	
 4. Load CUDA and FFmpeg HPCC Modules<br><br>
  	`module load cuDNN/7.6.4.38-CUDA-10.1.105`<br>
 	`module load FFmpeg`
+	
+	(Before you load FFmpreg, you may have to use `module load GCCcore/10.2.0`
 	
 4. Start IPython shell<br><br>
 	`ipython`
