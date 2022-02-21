@@ -1,6 +1,19 @@
 # DeepLabCut on HPCC
 
+For a good overview of how DLC works: [DeepLabCut User Guide (for single animal projects)](https://deeplabcut.github.io/DeepLabCut/docs/standardDeepLabCut_UserGuide.html#)
+
+For specifics related to multi-animal project: [DeepLabCut for Multi-Animal Projects](https://deeplabcut.github.io/DeepLabCut/docs/maDLC_UserGuide.html)
+
+The following instructions are based primarily on those two docs, you should consult them if there's any problem.
+
 ## HPCC Access
+
+If you want to access the GUI interface, use: https://ondemand.hpcc.msu.edu/
+
+	- Create Interactive Desktop instance from Interactive Apps (don't forget to add GPU to your instance, try to use amd20 for now)
+	- From Applications -> System Tools, open Terminal.
+
+Else,
 
  1. Open PowerShell
  2. Enter the following into the shell
@@ -12,7 +25,7 @@
 ## Starting Up DeepLabCut Software on the HPCC
 
 1. Change to your DeepLabCut project directory
-2. Activate virtual environment<br><br>
+2. Activate virtual environment (named 'DLC')<br><br>
 	`conda activate DLC`
 	
 	(You may have to load Conda before this command using `module load Conda/3`)
@@ -156,7 +169,7 @@ This zip file contains a folder with three subdirectories.
      
     3. Open the config.yaml file in a text editor
      
-    	1. Change "scorer" to your initials, or use "CZ" as your scorer to avoid having to change this throughout the project files
+    	1. You can change "scorer" to your initials, but we recommend you to use "CZ" as your scorer to avoid having to change this throughout the project files
     	2. Change "project_path" to your DeepLabCut project path
     	3. Change the paths for each video to the correct path for your HPCC account
     	4. Optionally: Add a skeleton definition, see docs for details. This skeleton will be used when
@@ -172,9 +185,21 @@ This zip file contains a folder with three subdirectories.
 		3. Open the CollectedData_{your scorer variable}.csv in Excel
 		4. Change all values in the "scorer" row to your scorer variable
 		5. Save the file
-	- Follow the steps in "Starting Up DeepLabCut Software on the HPCC"
-	- Run the following command in the IPython shell
+    8. Follow the steps in "Starting Up DeepLabCut Software on the HPCC"
+    9. Run the following command in the IPython shell (We're merely converting the format of label to one that is acceptable to DeepLabCut)
+		
 		`deeplabcut.convertcsv2h5(config_path, user_feedback=False)`
+	
+    10. Create training dataset using- (DeepLabCut will partitiion the dataset into train/test parts)
+	
+		`deeplabcut.create_training_dataset(config_path, augmenter_type='imgaug')`
+	
+
+The project is now ready for training. To begin training-
+        
+		deeplabcut.train_network(config_path)
+		
+See above docs for training options. 
               
 	
    	 
