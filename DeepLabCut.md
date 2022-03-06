@@ -24,7 +24,7 @@ Else,
 
 ## Starting Up DeepLabCut Software on the HPCC
 
-1. Change to your DeepLabCut project directory
+1. Change to your DeepLabCut project directory (Use `cd` command. An example of directory name is `HenTracks-CZ-2022-02-21`)
 2. Activate virtual environment (named 'DLC')<br><br>
 	`conda activate DLC`
 	
@@ -36,10 +36,10 @@ Else,
 	
 	(Before you load FFmpreg, you may have to use `module load GCCcore/10.2.0`
 	
-4. Start IPython shell<br><br>
+5. Start IPython shell<br><br>
 	`ipython`
 	
-5. Within the IPython Shell<br><br>
+6. Within the IPython Shell<br><br>
 	`import os`<br>
 	`import deeplabcut`<br>
 	`config_path = os.path.join(os.getcwd(), 'config.yaml')`
