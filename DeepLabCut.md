@@ -163,7 +163,8 @@ This zip file contains a folder with three subdirectories.
 
 6. Configure the project
     
-    1. Download configuration file [here](https://drive.google.com/file/d/1rS0mkF33flUWivtDJS4UYNaz4yGjyj4f/view?usp=sharing)
+    1. Download configuration file [here](https://drive.google.com/file/d/1rS0mkF33flUWivtDJS4UYNaz4yGjyj4f/view?usp=sharing) 
+       		Hens_Collab/DeepLabCut/DLCProjectFiles/config.yaml
      
     2. Replace the config.yaml in your project folder with the new file
      
