@@ -149,7 +149,7 @@ This zip file contains a folder with three subdirectories.
 		
 	2. Extract the contents of the zip file containing the videos to 'C:\<your path>\videos'
 
-4. Download the labels [here](https://drive.google.com/drive/folders/1X6Ekwn6_y4cCfZdJM1VoT10zhmMjlG5a?usp=sharing).  This is: Hens_Collab/DeepLabCut/AllLabels/labeled-data
+4. Download the labels [here](https://drive.google.com/drive/folders/1X6Ekwn6_y4cCfZdJM1VoT10zhmMjlG5a?usp=sharing).  (This is: Hens_Collab/DeepLabCut/AllLabels/labeled-data)
 
 5. Create a new project
 	
@@ -164,7 +164,7 @@ This zip file contains a folder with three subdirectories.
 6. Configure the project
     
     1. Download configuration file [here](https://drive.google.com/file/d/1rS0mkF33flUWivtDJS4UYNaz4yGjyj4f/view?usp=sharing) 
-       		Hens_Collab/DeepLabCut/DLCProjectFiles/config.yaml
+       		(This is: Hens_Collab/DeepLabCut/DLCProjectFiles/config.yaml)
      
     2. Replace the config.yaml in your project folder with the new file
      
