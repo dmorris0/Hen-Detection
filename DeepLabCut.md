@@ -149,7 +149,7 @@ This zip file contains a folder with three subdirectories.
 		
 	2. Extract the contents of the zip file containing the videos to 'C:\<your path>\videos'
 
-4. Download the labels [here](https://drive.google.com/drive/folders/1X6Ekwn6_y4cCfZdJM1VoT10zhmMjlG5a?usp=sharing)
+4. Download the labels [here](https://drive.google.com/drive/folders/1X6Ekwn6_y4cCfZdJM1VoT10zhmMjlG5a?usp=sharing).  This is: Hens_Collab/DeepLabCut/AllLabels/labeled-data
 
 5. Create a new project
 	
