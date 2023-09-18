@@ -85,6 +85,34 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
+## (9/12 - 9/18) - Program Analysis
+
+This week had more focus on programming with both the trainYOLO program and separate from it for active analysis.
+
+### Requirements
+
+To reiterate, the requirements for this program are:
+
+1. Input: video data, likely presented as a series of images.
+2. Output: processes image data into annotation data.
+3. File type: programs use `.pt`. 
+
+### Running .pt Files
+
+I finally found a simple code segment! It works in VSC, it's very simple in code, and can be easily tweaked with little to no problems; it even works with a pose variant of `.pt` files. It will require more tweaking to add videos, but videos are basically a series of images.
+
+The issue still remains: it doesn't currently work with my current type of model. According to the documents and user questions, one must load an *official model* before using a personal model. Even after loading the official pose model first, it still gives me some errors to work out.
+
+[Source is this video by Koby_n_Code.](https://youtu.be/hg4oVgNq7Do?feature=shared)
+
+However, now I have base code that takes an input of a video, and outputs every image per frame, including saving every frame that is getting registered. I also added code that resets the folder used to save the predictions, but this is done for space-saving more than anything, and can be easily turned on and off (perhaps with a `y/n` command program before actively running the program). 
+
+This is good starting code, and now I have references for which to make more accurate code segments. For the current code, confidence is set as `conf=0.01` (the lowest I know to set it), but VideoCapture is set to its default speed. I also added a timer purely to see how much time has elapsed between starting and ending the program.
+
+---
+
+<br>
+
 ## (9/5 - 9/11) - Training and Testing
 
 I continued with annotations (until an unfortunate portion, see just below), before moving back to video footage and analysis.
