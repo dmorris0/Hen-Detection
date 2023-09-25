@@ -85,6 +85,63 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
+## (9/19 - 9/25) - Coding and Analysis
+
+This week was focused on continuing the program I have created, leaving annotations and making data on the backburner to focus on the end product.
+
+### Streamlined Storage
+
+My first order of business is to handle the storage of images: it is currently being inefficient by storing each image in a set of folders. Locating paths that don't yet exist can be difficult, but it shouldn't be super difficult to convert either.
+
+As an aside, I also added `save_txt = True` to the predict function, which lets me save the labels as a text file, in a series of numbers.
+
+I ended up with this code:
+```
+#Reorganize images and labels without folders.
+path = "/Users/generuan/YOLOv8/Predictions"
+files = os.listdir(path)
+for index, folder in enumerate(files):
+    #Path is /Users/generuan/YOLOv8/Predictions
+    #Index starts at 0, Folder starts at img1.jpg
+    old_labels = path + "/" + folder + "/labels/image0.txt"
+    old_image = path + "/" + folder + "/image0.jpg"
+    new_labels = path + "/labels" + str(index) + ".txt"
+    new_image = path + "/image" + str(index) + ".jpg"
+    os.rename(old_labels, new_labels)
+    os.rename(old_image, new_image)
+    os.rmdir(path + "/" + folder + "/labels")
+    os.rmdir(path + "/" + folder)
+```
+
+As long as it is, this was the simplest method I could figure out to simplify my folder of images down to just the images and label data.
+
+Furthermore, I applied an extra layer by sorting these images and labels into two folders, for ease of organization. The code is as follows:
+
+```
+#Reset files path (otherwise, it counts above actual number of images.)
+files = os.listdir(path)
+for file in files:
+    #File starts at image0.jpg
+    file_path = path + "/" + file
+    file_name, file_ext = os.path.splitext(file)
+    if(file_ext == ".jpg"):
+        shutil.move(file_path, image_folder)
+    elif(file_ext == ".txt"):
+        shutil.move(file_path, label_folder)
+```
+
+It checks the extension of the file by splitting the file name between the period (using the period in the extension part of the string). This can be applied to any type of file-checking code; it currently applies to the `.jpg` images and `.txt` label files.
+
+### Loading a Custom Model
+
+Once again, I get into problems with running the model I have already trained. This time, I've saved myself some headache by using try-except, so that even if loading the model fails, the program still runs as normal. I've also integrated a boolean to check if the trained model loads, so I can use two separate input videos without harming either functional model.
+
+I've also tested it with the regular, non-pose model, and it won't budge.
+
+---
+
+<br>
+
 ## (9/12 - 9/18) - Program Analysis
 
 This week had more focus on programming with both the trainYOLO program and separate from it for active analysis.
