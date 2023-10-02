@@ -85,6 +85,25 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
+## (9/26 - 10/2) - Annotations Galore
+
+As my image processing program was handed off to someone with more experience (to Yunfei, to wit), I continued making annotations in trainYOLO, to hopefully create a good pose model in YOLOv8.
+
+### Changes of Devices
+
+In order to smoothen the progress of annotations, I switched to using my trainYOLO account on my PC rather than my laptop. Having previous experience annotating on mouse and keyboard from having annotated lots of eggs, it certainly sped up the rate at which I could annotate hens.
+
+### Progress Update
+
+With 77 labeled images out of a current 134 images and 2309 objects listed, I have a mAP of 0.916. However, in order to try to predict images directly on the trainYOLO program, I would need to upgrade my subscription (which I'm not going to do because I really shouldn't spend any more money than I have to).
+
+The primary thing inherently holding me back is my odd inability to actually test my models, no matter what methods I try to find.
+
+Models may be updated and placed into a folder (`work/YOLOv8 Images to Data/Hen Analysis`) in GitHub. More images will also be added as time passes if this works out as a good annotation method.
+
+---
+<br>
+
 ## (9/19 - 9/25) - Coding and Analysis
 
 This week was focused on continuing the program I have created, leaving annotations and making data on the backburner to focus on the end product.
