@@ -1,0 +1,31 @@
+This is how to use the current state of either YOLOv8 video-to-data files.
+
+Input Files:
+There are five input files to be considered.
+1. orig_model, the path name for the original model, one that has been officially created. Either the YOLOv8n or YOLOv8 pose were used for the demonstrations.
+2. orig_video, the path name for a video. This video should befit the original model; I used a stock video of people walking for both original models.
+3. pre_trained, path for the trained model. Used the same type of model as the original (just in case).
+4. video_path, path for a video using the trained model.
+5. save_path, where the images will be collected. This should connect to the same path as where the model is being used.
+    This save path is connected to Visual Studio Code in a separate folder, which is how I save my images.
+    The end folder name needs to be the same as the name used in the "projects" variable in the save function.
+
+Note: Time is unnecessary, but was used to gauge how long the model took to run a certain number of images at a time.
+
+model.predict:
+This function, used by YOLO, needs its parameters altered if running on different computers.
+
+image_name = "img" + str(count) + ".jpg" #The file suffix is important for the reorganizing code in the end.
+detect_params = model.predict(source=[frame], conf=0.01, save=True, save_txt = True, project="Predictions", name=image_name)
+
+Leave "source" as is.
+Change "conf" if you need a different confidence level.
+Use "save"=True and "save_txt"=True to save the image and the labels respectively. There are more in the documentations.
+Change "project" to the aforementione folder for the end results. This must stay consistent.
+"name" doesn't actually affect anything, but is used to keep the images and their label files more organized.
+
+Check https://docs.ultralytics.com/modes/predict/#inference-arguments for more information.
+
+The rest of the code should proceed as normally if all of the variables above have been altered consistently.
+
+- Gene
