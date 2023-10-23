@@ -85,7 +85,49 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
-## (9/26 - 10/2) - Annotations Galore
+## (10/10 - 10/16, 10/17 - 10/23) - Cropping
+
+This week was alternating between annotations and getting a cropping function to work.
+
+### Image Cropping in OpenCV - Scrapped
+
+To crop an image, first read the image into a variable. Then, when deciding on coordinates, follow below.
+
+To set the boundaries on an image, use:
+```
+crop = image[y:y+h, x:x+w]
+```
+`X` and `Y` are the starting points from the top left corner of the image, and `H` and `W` are the height and width respectively. (a:b) corresponds to the starting and end points, where `a` is the start and `b` is the end.
+
+This has since been scrapped for a proper masking tool.
+
+### Masking
+
+To mask an image, use the coordinates (mentioned above) of the top left corner (x0, y0) and the bottom right corner (x1, y1) as a rectangle with inverted colors. Then, use an AND bitmask to clear everything except for the contents inside the rectangle.
+
+```
+import cv2
+import numpy as np
+
+mask = np.zeros(org.shape, dtype=np.uint8)
+mask = cv2.rectangle(mask, (x0, y0), (x1, y1), (255, 255, 255), thickness=cv2.FILLED)
+
+result = cv2.bitwise_and(org, mask)
+
+cv2.imshow("Result: ", result)
+```
+
+Notes:
+1. `(image).shape` takes the data of an image of OpenCV, under (width, height, channel). This `channel` is unrelated to the actual cameras, but is instead related to the number of color channels (0:3, with 0 channels being grayscale, multiple channels adds Red, Green, and Blue).
+2. `dtype=np.uint8` refers to a data type of unsigned 8-bit integers.
+3. `thickness=cv2.FILLED` means all sections inbetween the two points.
+4. `(255, 255, 255)` corresponds to RGB colors, and thus is all black.
+5. `org` is the name for the original image. This is consistent within my code, and is written in shortform for simplicity.
+
+---
+<br>
+
+## (9/26 - 10/2, 10/3 - 10/10) - Annotations Galore
 
 As my image processing program was handed off to someone with more experience (to Yunfei, to wit), I continued making annotations in trainYOLO, to hopefully create a good pose model in YOLOv8.
 
