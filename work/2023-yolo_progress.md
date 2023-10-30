@@ -85,6 +85,56 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
+## (10/24 - 10/30) - Retreading Old Paths
+
+This week was initially based on recropping all of the previous image data, and then annotating data.
+
+### Struggling to Mask Images
+
+I spent way too long trying to mask images by some other methods with loading images through the external folders, particularly because some of the images are locked in regards to permissions, so it wouldn't let me load them at all. I basically resolved it by integrating some of my code to tailored code made by an language learning bot.
+
+### My Opinion on ChatGPT
+
+Yes, I have used ChatGPT to help me write code, and I'm not ashamed to admit that. When it's not being used to give false hope about test answers, it is actually a decent language model. Since programming code is considered a language, it actually writes fairly decent code when provided specifications.
+
+I have used ChatGPT previously to try and write code, but the image masking tool is the only one I've actually went through with using the code; only because it actually worked with zero errors. The rest I've found other solutions or figured them out myself.
+
+The resulting code was actually good enough to be standalone. It is posted in the Google Drive. If any image does not have permission to use for any reasons, the code skips it instead of fruitlessly pointing it out as an error message in the terminal. 
+
+(There are 134 starting images, but only 112 are freely usable. The other 22 cause problems.)
+
+### Returning to Annotations
+
+This task is quite simple, though instead of using trainYOLO, I diverged back to Roboflow for the simpler annotation data, and because it didn't require me to pay any more. (I cancelled my trainYOLO subscription so I don't forget, and so that I won't be paying any more for the months to come.)
+
+I ended with a fair 39 images annotated by the meeting, and have already made a model using Ultralytics. 
+
+I compared the images with two types of thresholds, plus the cropped and uncropped images.
+
+Thresholds are placed at 0.18 confidence and 0.81 IoU (intersection over union, the threshold in which the model displays overlapped bounding boxes, with lower numbers meaning more overlaps). Both of these numbers are semi-arbitrary. The other values are the lowest values, 0.01 confidence and 0 IoU.
+
+All four are based on the same images, for reference, a Channel 16 image, 7-24-2023, 20:30:03.
+
+(Full image, set threshold.)
+
+![Full image, set threshold.](./ReportImages/full_set.png)
+
+(Full image, low threshold.)
+
+![Full image, low threshold.](./ReportImages/full_low.png)
+
+(Cropped image, set threshold.)
+
+![Cropped image, set threshold.](./ReportImages/cropped_set.png)
+
+(Cropped image, low threshold.)
+
+![Cropped image, low threshold.](./ReportImages/cropped_low.png)
+
+---
+
+<br>
+
 ## (10/10 - 10/16, 10/17 - 10/23) - Cropping
 
 This week was alternating between annotations and getting a cropping function to work.
