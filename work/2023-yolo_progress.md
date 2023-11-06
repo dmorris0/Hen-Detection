@@ -85,6 +85,44 @@ If you wish to have the API Key for my Roboflow model: "Jag7chAK7d5GtzYsv4LX", [
 
 # YOLO - Creating and Testing a Training Model for Analyzing Hens
 
+## (10/31 - 11/6) - New Data, Same Process
+
+This week was a simple instance of annotating data and getting models.
+
+This marks my last day for this project, and I had a great time. All entries regarding my work in YOLO are here, entries regarding my other work with DeepLabCut are with the other documentation file I had.
+
+### Current Progress
+
+With 93 images total, I have a more accurate model than the previous instance, with the same parameters as the previous model. 
+
+![Metrics of Nov 6 model](./ReportImages/metrics-11-06-2023.png)
+![Loss graphs of Nov 6 model](./ReportImages/losses-11-06-23.png)
+
+All three of the following images are based on an image from Channel 1, dated 7-28-22, 2:20 PM.
+
+Conf = 0.25, IoU = 0.45:
+![Image Channel 1, 7-28, 2:20 PM, conf = 0.25, IoU = 0.45](./ReportImages/ch1_trial1.png)
+
+Conf = 0.01, IoU = 0:
+![Image Channel 1, 7-28, 2:20 PM, conf = 0.01, IoU = 0](./ReportImages/ch1_trial2.png)
+
+Conf = 0.2, IoU = 0.4:
+![Image Channel 1, 7-28, 2:20 PM, conf = 0.2, IoU = 0.4](./ReportImages/ch1_trial3.png)
+
+### Other Metrics
+
+With some updates in Ultralytics, there are more graphs, but they are basic bar graphs with one data point, so I'm not adding the images:
+
+GFLOPs = 8.192: FLOPS are floating-point operations per second, G denoting giga, or 10^9; these are essentially the number of instructions performed per second, regarding specifically floating-point operations (of which is the entire work behind the models), and thus denote speed.
+
+Parameters = 3,011,043: not much documentation, as these are newer features at the time of writing, but this is very likely just the total number of parameters used in the creation of the model, as the number of actual labels is much smaller.
+
+speed_PyTorch(ms) = 155.865: likely the speed at which it takes to run in PyTorch. 
+
+---
+
+<br>
+
 ## (10/24 - 10/30) - Retreading Old Paths
 
 This week was initially based on recropping all of the previous image data, and then annotating data.
